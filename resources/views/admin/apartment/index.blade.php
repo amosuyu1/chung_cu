@@ -63,7 +63,16 @@
                                         <td>{{ $row->id }}</td>
                                         <td>{{ Str::limit(strip_tags($row->ten_can_ho), 50, '...') }}</td>
                                         <td>{{ $row->building->ten_chung_cu }}</td>
-                                        <td> {{ $row->gia }}</br>{{ $row->gia_thue }} </td>
+                                        <td> 
+                                            <div>
+                                                <div class="badge {{ $row->muc_dich == 0 ? 'bg-success' : ($row->muc_dich == 1 ? 'bg-warning' : 'bg-primary') }}"
+                                                    data-status="{{ $row->muc_dich }}">
+                                                    {{ $row->muc_dich == 0 ? 'Bán' : ($row->muc_dich == 1 ? 'Thuê' : 'Bán hoặc thuê') }}
+                                                </div>
+                                            </div>
+                                            {{ $row->gia }}</br>{{ $row->gia_thue }} 
+                                            
+                                        </td>
                                         <td>
                                             <p>Diện tích: {{ $row->dien_tich }}</p>
                                             <p>Phòng ngủ: {{ $row->so_phong }}</p>
@@ -77,12 +86,7 @@
                                                 data-id="{{ $row->id }}" data-status="{{ $row->trang_thai }}" style="cursor: pointer;">
                                                 {{ $row->trang_thai == 0 ? 'Đang đăng' : 'Đã gỡ' }}
                                             </span>
-                                            <div>
-                                                <div class="badge {{ $row->muc_dich == 0 ? 'bg-success' : ($row->muc_dich == 1 ? 'bg-warning' : 'bg-primary') }}"
-                                                    data-status="{{ $row->muc_dich }}">
-                                                    {{ $row->muc_dich == 0 ? 'Bán' : ($row->muc_dich == 1 ? 'Thuê' : 'Bán hoặc thuê') }}
-                                                </div>
-                                            </div>
+                                           
                                         </td>
                                         <td>
                                             <a class="btn btn-primary btn-sm" href="apartment/{{ $row->id }}"><i
@@ -116,7 +120,7 @@
             $('#example1').DataTable({
                 "ordering": true, // Bật sắp xếp
                 "order": [
-                    [0, 'asc']
+                    [0, 'desc']
                 ], // Sắp xếp mặc định theo cột ID
                 "pageLength": 10, // Số dòng trên mỗi trang
                 "language": {

@@ -374,7 +374,7 @@ Header Style
 
 .background-header {
   background-color: #fff;
-  height: 80px!important;
+  height: 60px!important;
   position: fixed!important;
   top: 0!important;
   left: 0;
@@ -524,7 +524,7 @@ Header Style
 }
 
 .background-header .main-nav ul.nav {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .header-area .main-nav .menu-trigger span,
@@ -1154,14 +1154,16 @@ Properties Style
 */
 
 .properties .item {
-  background-color: #fafafa;
-  border-radius: 10px;
-  padding: 30px;
   margin-bottom: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.properties .item .info-content {
+  padding: 10px;
 }
 
 .properties .item img {
-  border-radius: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .properties .item span.category {
@@ -1197,9 +1199,7 @@ Properties Style
 }
 
 .properties .item ul {
-  border-bottom: 1px solid #eaeaea;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .properties .item h6 {

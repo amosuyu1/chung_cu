@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
            $this->call([
             ChungCuTableSeeder::class,
             CanHoTableSeeder::class,
+            AdminSeeder::class,
         ]);
     }
 }

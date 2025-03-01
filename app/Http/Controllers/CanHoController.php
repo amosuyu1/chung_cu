@@ -110,6 +110,7 @@ class CanHoController extends Controller
             'gia' => $request->gia,
             'noi_that' => $request->noi_that,
             'gia_thue' => $request->gia_thue,
+            'phap_ly' => $request->phap_ly,
             'chung_cu_id' => $request->id_chung_cu,
             'images' => json_encode($imagePaths), // Lưu đường dẫn dưới dạng JSON
         ]);

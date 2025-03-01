@@ -19,6 +19,7 @@ class CanHo extends Model
         'noi_that',
         'muc_dich',
         'trang_thai',
+        'phap_ly',
         'hot',
         'dien_tich',
         'chung_cu_id',

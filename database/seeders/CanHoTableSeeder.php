@@ -27,6 +27,7 @@ class CanHoTableSeeder extends Seeder
                 'slug' => $faker->sentence(),
                 'slug' => Str::slug('Căn hộ ' . $faker->word() . $faker->numberBetween(1, 100) ), // Tạo slug hợp lệ từ tiêu đề
                 'huong_nha' => $faker->randomElement(['Đông', 'Tây', 'Nam', 'Bắc']),
+                'phap_ly' => $faker->randomElement(['Sổ đỏ/ Sổ hồng', 'Hợp đồng mua bán']),
                 'so_phong' => $faker->numberBetween(2, 5),
                 'phong_tam' => $faker->numberBetween(1, 3),
                 'noi_that' => $faker->boolean(50), // 50% xác suất có nội thất

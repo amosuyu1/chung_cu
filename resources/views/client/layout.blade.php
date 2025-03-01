@@ -87,7 +87,7 @@
   <!-- ***** Header Area End ***** -->
     <!-- Main Content -->
     <main>
-        <div class="container mt-4">
+        <div class="mt-4">
             @yield('content')
         </div>
     </main>

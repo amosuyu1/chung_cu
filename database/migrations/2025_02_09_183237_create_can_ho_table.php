@@ -14,10 +14,11 @@ class CreateCanHoTable extends Migration
             $table->string('slug')->unique();; // slug
             $table->text('mo_ta')->nullable(); // Mô tả
             $table->string('Huong_nha'); // Mô tả
+            $table->string('phap_ly'); 
             $table->integer('so_phong'); // Số phòng
             $table->integer('phong_tam'); // Phòng tắm
             $table->integer('noi_that'); // Tình hình nội thất
-            $table->integer('muc_dich')->default(0); // Mục đích sử dụng
+            $table->integer('muc_dich'); // Mục đích sử dụng
             $table->integer('trang_thai')->default(0); // Trạng thái 
             $table->integer('hot')->default(0); // hot 
             $table->decimal('dien_tich', 8, 2); // Diện tích (ví dụ: 100.50 m²)
